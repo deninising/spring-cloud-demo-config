@@ -12,10 +12,8 @@ eureka:
 zuul:
   routes:
     api-a:
-      path: /api/admin/**
-      serviceId: hi-spring-cloud-service-admin
+      path: /api/course/**
+      serviceId: hi-spring-cloud-course
     api-b:
-      path: /api/config/**
-      serviceId: hi-spring-cloud-config
-    host:
-      socket-timeout-millis: 10000
+      path: /api/member/**
+      serviceId: hi-spring-cloud-member
