@@ -1,0 +1,18 @@
+spring:
+  profiles: one
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123
+    username: root
+    url: jdbc:mysql://localhost:3306/ms_member?serverTimezone=GMT%2B8
+  application: course
+
+server:
+  port: 9083
+
+eureka:
+  client:
+    service-url:
+      register-With-Eureka: true
+      fetchRegistry: true
+      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka
