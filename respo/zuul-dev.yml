@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hi-spring-cloud-zuul
+
+server:
+  port: 8769
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /api/admin/**
+      serviceId: hi-spring-cloud-service-admin
+    api-b:
+      path: /api/config/**
+      serviceId: hi-spring-cloud-config
+    host:
+      socket-timeout-millis: 10000
